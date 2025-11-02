@@ -5,9 +5,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     height: 100vh;
-      background: linear-gradient(to top right, #a2d1ee,white, #ffffff );
+    background: linear-gradient(to top right, #a2d1ee, white, #ffffff);
 }
 
 /* Navbar css */
@@ -18,6 +18,7 @@ nav.navbar {
     width: 100vw;
     z-index: 1;
     background-color: aliceblue;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
 }
 
 .navbar-brand {
@@ -38,7 +39,8 @@ nav.navbar {
 /* Hero section css */
 
 div.container {
-     margin-top: 120px;
+    margin-top: 120px;
+
     .sections {
         margin-top: 60px;
         display: grid;
@@ -66,10 +68,10 @@ div.container {
 
     h3:hover {
         transform: translateY(-2px);
-        box-shadow: 2px 2px 2px rgb(193, 190, 190);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     }
 
-    
+
 
     img {
         border-radius: 5px;
@@ -86,7 +88,7 @@ div.container {
 
 /* About section css */
 
-.about{
+.about {
     position: relative;
 }
 
@@ -99,23 +101,86 @@ div.container {
     border-radius: 5px;
 }
 
-#about-sec{
+#about-sec {
     margin-bottom: 40px;
 }
 
-.links{
+.links {
     position: absolute;
     top: 350px;
     background-color: aliceblue;
-    margin-left: 100px;
+    margin-left: 150px;
     border-radius: 5px;
-        a{
-          color: rgb(86, 85, 85);
-          font-size: 3rem;
-          padding: 8px;
-          
-        }
-        
+
+    a {
+        color: rgb(86, 85, 85);
+        font-size: 3rem;
+        padding: 8px;
+
     }
 
+}
+
 /* About section css end */
+
+/* Skills section */
+
+div.tools-frontend {
+
+    justify-content: center;
+    align-self: center;
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+}
+
+div.tools-frontend-fl {
+
+    justify-content: center;
+    align-self: center;
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+}
+
+div.tools-database {
+
+    justify-content: center;
+    align-self: center;
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+}
+div.tools-backend {
+
+    justify-content: center;
+    align-self: center;
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+}
+
+.tool-img {
+    height: 180px;
+    object-fit: contain;
+}
+
+
+
+/* Skills section end */
+
+html {
+    scroll-behavior: smooth;
+}
