@@ -88,6 +88,10 @@ div.container {
 
 /* About section css */
 
+.about-section{
+    padding-top: 100px !important;
+}
+
 .about {
     position: relative;
 }
@@ -124,9 +128,24 @@ div.container {
 /* About section css end */
 
 /* Skills section */
+div.skills{
+    
+}
+
+div#skill-section{
+    padding-top: 90px !important;
+}
+
+div.frontend{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    gap: 10px;
+    margin-left: 50px;
+}
 
 div.tools-frontend {
-
+    background-color: rgb(233, 230, 230);
+    border-radius: 10px;
     justify-content: center;
     align-self: center;
 
@@ -138,7 +157,9 @@ div.tools-frontend {
 }
 
 div.tools-frontend-fl {
-
+    background-color: rgb(233, 230, 230);
+    border-radius: 10px;
+    margin-left: 10px;
     justify-content: center;
     align-self: center;
 
@@ -150,7 +171,7 @@ div.tools-frontend-fl {
 }
 
 div.tools-database {
-
+    
     justify-content: center;
     align-self: center;
 
@@ -161,7 +182,12 @@ div.tools-database {
 
 }
 div.tools-backend {
-
+    background-color: rgb(233, 230, 230);
+    border-radius: 10px;
+    margin-top: 20px !important;
+    margin: auto;
+    margin-bottom: 20px !important;
+    padding-bottom: 50px !important;
     justify-content: center;
     align-self: center;
 

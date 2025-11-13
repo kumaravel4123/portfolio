@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="shortcut icon" href="/assets/images/icon/p-l-removebg-preview.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -62,10 +63,10 @@
                 <button class="btn btn-secondary px-4 py-2">Say, Hello!</button>
 
                 <div class="sections">
-                    <a href="">
+                    <a href="#skill-section">
                         <h3>Skills</h3>
                     </a>
-                    <a href="">
+                    <a href="#about-sec">
                         <h3>Projects</h3>
                     </a>
                     <a href="">
@@ -83,7 +84,7 @@
 
         <!-- About section -->`
 
-        <div class="container about-section d-flex bg-body-secondary p-5 my-5" id="about-sec">
+        <div class="container about-section d-flex bg-body-secondary p-5" id="about-sec">
             <div class="about w-100  me-5">
                 <img src="/assets/images/Profile.jpg" height="400px" alt="" class="about-img">
                 <div class="links mt-2  ">
@@ -112,12 +113,12 @@
 
         <!-- Skills section -->
 
-        <div class="skills my-5 mx-3" id="skill-section">
-            <h1 class="text-center">Skills</h1>
-            <div class="frontend d-flex">
+        <div class="skills" id="skill-section">
+            <h1 class="text-center name">Skills</h1>
+            <div class="frontend">
 
-                <div class="tools-frontend row p-3 ">
-                    <h1 class="text-center my-5">Frontend Development</h1>
+                <div class="tools-frontend row p-3">
+                    <h3 class="text-center mb-4">Frontend Development</h3>
                     <div class="col col-sm-6 col-md-4 col-lg-4">
                         <div class="card  text-center">
                             <img src="/assets/images/skills/html.png" class="card-img-top tool-img p-3" alt="...">
@@ -162,7 +163,7 @@
 
 
                     <div class="tools-frontend-fl row p-3">
-                        <h1 class="text-center my-5">Framework & Libraries</h1>
+                        <h3 class="text-center mb-4">Framework & Libraries</h3>
                         <div class="col col-sm-6 col-md-4 col-lg-4">
                             <div class="card  text-center">
                                 <img src="/assets/images/skills/bootstrap.png" class="card-img-top tool-img p-3"
@@ -208,7 +209,7 @@
                 <div class="database d-flex">
 
                     <div class="tools-backend   row p-3">
-                        <h1 class="text-center my-4">Database & Backend developments</h1>
+                        <h3 class="text-center my-4">Database & Backend developments</h3>
                         <div class="col col-sm-6 col-md-4 col-lg-3">
                             <div class="card  text-center">
                                 <img src="/assets/images/skills/sql.png" class="card-img-top tool-img p-3" alt="...">
@@ -257,6 +258,17 @@
 
 
         <!-- Skills section end -->
+
+        <!-- Project section -->
+
+        <section id="Projects">
+            <h1>Projects</h1>
+            <div id="works">
+            </div>
+        </section>
+
+
+        <!-- Project section end -->
 
     </main>
 

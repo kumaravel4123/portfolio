@@ -1,40 +1,83 @@
 const professions = [
-        'Full-Stack Developer',
-        'Frontend Developer',
-        'Backend Developer',
-        'Problem Solver',
+    'Full-Stack Developer',
+    'Frontend Developer',
+    'Backend Developer',
+    'Problem Solver',
 
-    ];
+];
 
-    // Typewriter Effect
-    let professionIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 150;
+// Typewriter Effect
+let professionIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150;
 
-    function typeWriter() {
-        if (!heroSubtitle) return;
+function typeWriter() {
+    if (!heroSubtitle) return;
 
-        const currentProfession = professions[professionIndex];
+    const currentProfession = professions[professionIndex];
 
-        if (isDeleting) {
-            heroSubtitle.innerHTML = "I'm a " + currentProfession.substring(0, charIndex - 1) + '<span class="cursor">|</span>';
-            charIndex--;
-            typingSpeed = 75;
-        } else {
-            heroSubtitle.innerHTML = "I'm a " + currentProfession.substring(0, charIndex + 1) + '<span class="cursor">|</span>';
-            charIndex++;
-            typingSpeed = 150;
-        }
-
-        if (!isDeleting && charIndex === currentProfession.length) {
-            typingSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            professionIndex = (professionIndex + 1) % professions.length;
-            typingSpeed = 500; // Pause before next word
-        }
-
-        setTimeout(typeWriter, typingSpeed);
+    if (isDeleting) {
+        heroSubtitle.innerHTML = "I'm a " + currentProfession.substring(0, charIndex - 1) + '<span class="cursor">|</span>';
+        charIndex--;
+        typingSpeed = 75;
+    } else {
+        heroSubtitle.innerHTML = "I'm a " + currentProfession.substring(0, charIndex + 1) + '<span class="cursor">|</span>';
+        charIndex++;
+        typingSpeed = 150;
     }
+
+    if (!isDeleting && charIndex === currentProfession.length) {
+        typingSpeed = 2000; // Pause at end
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        professionIndex = (professionIndex + 1) % professions.length;
+        typingSpeed = 500; // Pause before next word
+    }
+
+    setTimeout(typeWriter, typingSpeed);
+}
+
+
+const work_details = [
+    { img: 'ec.jpeg', title: 'E-commerce', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Website/", msg: "Developed a responsive e-commerce website using HTML, CSS, and JavaScript, featuring product listings and a dynamic shopping cart." },
+    { img: 'weather.png', title: 'Weather Dashboard', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Weather-Dashboard/", msg: "Built a responsive Weather Dashboard using HTML, CSS, and JavaScript with real-time updates and city search functionality." },
+    { img: 'td.avif', title: 'To-Do-List', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/To-Do-List/", msg: "Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
+    { img: 'ca.png', title: 'Calculator', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Calculator/", msg: "Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
+    { img: 'pf.png', title: 'Portfolio', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Portfolio/", msg: "Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
+    { img: 'finance.avif', title: 'Finance Tracker', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/personal-Finance/", msg: "Developed a personal finance tracker to manage income and expenses with interactive charts, category filters, and a responsive interface for better financial insights." },
+];
+
+function render(work) {
+    return `
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="assets/images/img/${work.img}" alt="${work.title}">
+          <h5>${work.title}</h5>
+        </div>
+        <div class="card-back">
+        <div class="back-msg">
+            <p class="msg"><span>${work.title}</span>: ${work.msg}</p>
+            <p class="tech"><span>Tech Stack:</span> ${work.tech}</p>
+        </div>
+          <a href="${work.link}" target="_blank" class="btn">View Demo</a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderWorks(works) {
+    const works_container = document.querySelector('#works');
+    let result = '';
+    for (let work of works) {
+        result += render(work);
+    }
+    works_container.innerHTML = result;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderWorks(work_details);
+});    
