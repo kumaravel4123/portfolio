@@ -81,3 +81,28 @@ function renderWorks(works) {
 document.addEventListener('DOMContentLoaded', () => {
     renderWorks(work_details);
 });    
+
+
+// 
+
+// Send Message Button
+const form = document.getElementById('reach');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // stop page reload
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+    .then(response => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset(); // clear form
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    })
+    .catch(error => alert("Error sending message: " + error));
+});
