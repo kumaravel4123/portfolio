@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 95vh;
     background: linear-gradient(to top right, #a2d1ee, white, #ffffff);
 }
 
@@ -45,7 +45,6 @@ div.container {
         margin-top: 60px;
         display: grid;
         grid-template-columns: auto auto auto;
-        margin-top: 50px;
 
         a {
             color: black;
@@ -81,8 +80,11 @@ div.container {
 }
 
 .name {
-    font-size: 4rem;
-    font-weight: bold;
+    
+        color: #58A6FF;
+        font-size: 4em;
+        margin-bottom: 15px;
+        font-weight: 600;
 }
 
 
@@ -96,6 +98,7 @@ div.container {
     overflow: hidden;
     border-right: 3px solid #898888;
     width: 0;
+
     /* animation starts from 0 width */
     animation: typing 4s steps(20), blink 0.7s step-end infinite;
 }
@@ -122,16 +125,25 @@ div.container {
                 /* Extra small (phones) */
                 @media (max-width: 480px) {
                     /* mobile styles */
+                    .intro{
+                        display: none;
+                    }
                 }
 
                 /* Small devices (big phones, small tablets) */
                 @media (max-width: 768px) {
                     /* portrait tablets + large mobiles */
+                    .intro{
+                        display: none;
+                    }
+
                 }
 
                 /* Medium devices (tablets landscape) */
                 @media (max-width: 1024px) {
-                    /* tablets */
+                    .intro{
+                        display: none;
+                    }
                 }
 
                 /* Large screens (desktops) */
@@ -147,27 +159,24 @@ div.container {
 
 .about-section {
     padding-top: 100px !important;
+    /* background-color: rgb(191, 189, 189); */
+    display: flex;
+    border-radius: 5px;
 }
 
 .about {
     position: relative;
+    width: fit-content;
 }
 
 .about-img {
     border-radius: 50px;
-
-}
-
-.about-section {
-    border-radius: 5px;
-}
-
-#about-sec {
-    margin-bottom: 40px;
 }
 
 .links {
-    position: absolute;
+    /* position: absolute; */
+    margin-top: 10px;
+    width: fit-content;
     top: 350px;
     background-color: aliceblue;
     margin-left: 150px;
@@ -181,6 +190,57 @@ div.container {
     }
 
 }
+      /* Media Queries start */
+                /* Extra small (phones) */
+                @media (max-width: 480px) {
+                    /* mobile styles */
+                    .intro{
+                        display: none;
+                    }
+                }
+
+                /* Small devices (big phones, small tablets) */
+                @media (max-width: 768px) {
+                    /* portrait tablets + large mobiles */
+                    .intro{
+                        display: none;
+                    }
+                }
+
+                /* Medium devices (tablets landscape) */
+                @media (max-width: 1024px) {
+
+                    #about-sec{
+                        padding: 0%;
+                        margin-top: 0%;
+                    }
+
+                    .about-section{
+                       display: block;
+                       background-color: rgb(201, 197, 197);
+                    }
+
+                    .about{
+                         display: block;
+                         justify-content: center;
+                         align-items: center;
+                         margin-left: 0px;
+                    }
+
+                    .about-img{
+                        height: 350px;
+                        margin-left: 0%;
+                    }
+
+
+                }
+
+                /* Large screens (desktops) */
+                @media (max-width: 1200px) {
+                    /* desktops */
+                }
+
+        /* Media Queries end */
 
 /* About section css end */
 
@@ -193,7 +253,7 @@ div#skill-section {
 
 div.frontend {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto ;
     gap: 10px;
     margin-left: 50px;
 }
@@ -207,6 +267,10 @@ div.tools-frontend {
     .card:hover {
         transform: translateY(-2px);
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+    .js-img{
+        border-radius: 20px;
     }
 
 }
@@ -225,17 +289,7 @@ div.tools-frontend-fl {
 
 }
 
-div.tools-database {
 
-    justify-content: center;
-    align-self: center;
-
-    .card:hover {
-        transform: translateY(-2px);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    }
-
-}
 
 div.tools-backend {
     background-color: rgb(233, 230, 230);
@@ -258,6 +312,37 @@ div.tools-backend {
     height: 180px;
     object-fit: contain;
 }
+
+
+     /* Media Queries start */
+                /* Extra small (phones) */
+                @media (max-width: 480px) {
+                    /* mobile styles */
+                    
+                }
+
+                /* Small devices (big phones, small tablets) */
+                @media (max-width: 768px) {
+                    /* portrait tablets + large mobiles */
+                   
+                }
+
+                /* Medium devices (tablets landscape) */
+                @media (max-width: 1024px) {
+                    
+                    div.frontend {
+                       display: block;
+                       gap: 20px;
+                   }
+                   
+                }
+
+                /* Large screens (desktops) */
+                @media (max-width: 1200px) {
+                    /* desktops */
+                }
+
+        /* Media Queries end */
 
 
 
@@ -290,9 +375,13 @@ div.tools-backend {
     height: 100vh;
     font-family: 'Inter', 'Roboto', sans-serif;
 
+    .col2{
+        background-color: rgb(175, 215, 232);
+    }
+
     h2 {
         color: #58A6FF;
-        font-size: 2.5em;
+        font-size: 3em;
         margin-bottom: 15px;
         font-weight: 600;
     }
@@ -378,7 +467,7 @@ div.tools-backend {
             border: none;
             border-radius: 5px;
             background: #020024;
-            background: linear-gradient(90deg, #3d98d9 0%, #515ed1 100%);
+            background: linear-gradient(90deg, #3d98d9 0%, #8590ed 100%);
             transition: transform 0.5s ease;
         }
 
