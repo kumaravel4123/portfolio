@@ -67,13 +67,13 @@ row.className = "tools-skill row row-cols-1 row-cols-md-2 g-4";
 
      // Skills data
 const skillsData = [
-  { title: "HTML 5", img: "/assets/images/skills/html.png", padding: "p-3" },
-  { title: "CSS 3", img: "/assets/images/skills/css.png", padding: "p-4" },
-  { title: "JS", img: "/assets/images/skills/javascript.webp", padding: "p-3 js-img" },
-  { title: "Bootstrap", img: "/assets/images/skills/bootstrap.png", padding: "p-3" },
-  { title: "React", img: "/assets/images/skills/react.png", padding: "" },
-  { title: "SQL", img: "/assets/images/skills/sql.png", padding: "p-3" },
-  { title: "MY SQL", img: "/assets/images/skills/mysql.png", padding: "p-3" }
+  { title: "HTML 5", img: "assets/images/skills/html.png", padding: "p-3" },
+  { title: "CSS 3", img: "assets/images/skills/css.png", padding: "p-4" },
+  { title: "JS", img: "assets/images/skills/javascript.webp", padding: "p-3 js-img" },
+  { title: "Bootstrap", img: "assets/images/skills/bootstrap.png", padding: "p-3" },
+  { title: "React", img: "assets/images/skills/react.png", padding: "" },
+  { title: "SQL", img: "assets/images/skills/sql.png", padding: "p-3" },
+  { title: "MY SQL", img: "assets/images/skills/mysql.png", padding: "p-3" }
 ];
 
 skillsData.forEach(skill => {
@@ -114,7 +114,7 @@ skillRoot.appendChild(skillsDiv);
 const projects = [
   {
     title: "E-Commerce",
-    img: "/assets/images/projects/E-commerce img.avif",
+    img: "assets/images/projects/E-commerce img.avif",
     desc:
       "Fully responsive online store using React.js. Includes product listing, search, cart management and checkout features.",
     live: "https://react-e-commerce-1ewmtmf04-kumaravels-projects-6aad2830.vercel.app",
@@ -122,7 +122,7 @@ const projects = [
   },
   {
     title: "Thumbnail Popup's",
-    img: "/assets/images/projects/Thumbnail_img.png",
+    img: "assets/images/projects/Thumbnail_img.png",
     desc:
       "Responsive gallery layout with hover effects and animations are popup in big screen when the user click the picture.",
     live: "https://kumaravel4123.github.io/thumbnails-using-html-and-css/",
@@ -130,21 +130,21 @@ const projects = [
   },
   {
     title: "Responsive Website",
-    img: "/assets/images/projects/Responsive-web-design-devices.jpg",
+    img: "assets/images/projects/Responsive-web-design-devices.jpg",
     desc: "A clean and responsive multi-device website with simple flexbox and grid layout and the bootstrap is used for responsive.",
     live: "https://frontend-projects-ohpa2o3vs-kumaravels-projects-6aad2830.vercel.app",
     github: "https://frontend-projects-ohpa2o3vs-kumaravels-projects-6aad2830.vercel.app"
   },
   {
     title: "Instagram Clone",
-    img: "/assets/images/projects/Instagram_img.png",
+    img: "assets/images/projects/Instagram_img.png",
     desc: "A simple Instagram UI clone built with modern layouts with the React components like hooks, router and page navigation.",
     live: "http://react-instagram-clone-git-main-kumaravels-projects-6aad2830.vercel.app",
     github: "http://react-instagram-clone-git-main-kumaravels-projects-6aad2830.vercel.app"
   },
   {
     title: "Portfolio",
-    img: "/assets/images/projects/Portfolio_img.png",
+    img: "assets/images/projects/Portfolio_img.png",
     desc: "A responsive personal portfolio website with the frontend tools like HTML5, CSS3, Bootstrap and Javascript",
     live: "http://react-instagram-clone-rcjy.vercel.app",
     github: "http://react-instagram-clone-rcjy.vercel.app"
