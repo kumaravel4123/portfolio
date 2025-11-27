@@ -125,16 +125,16 @@ div.container {
                 /* Extra small (phones) */
                 @media (max-width: 480px) {
                     /* mobile styles */
-                    .intro{
+                    /* .intro{
                         display: none;
-                    }
+                    } */
                 }
 
                 /* Small devices (big phones, small tablets) */
                 @media (max-width: 768px) {
                     /* portrait tablets + large mobiles */
-                    .intro{
-                        display: none;
+                    div#sections{
+                       display: none;
                     }
 
                 }
@@ -159,7 +159,7 @@ div.container {
 
 .about-section {
     padding-top: 100px !important;
-    /* background-color: rgb(191, 189, 189); */
+    background-color: rgb(216, 215, 215);
     display: flex;
     border-radius: 5px;
 }
@@ -167,6 +167,10 @@ div.container {
 .about {
     position: relative;
     width: fit-content;
+}
+
+.about-ms{
+    display: none;
 }
 
 .about-img {
@@ -194,18 +198,34 @@ div.container {
                 /* Extra small (phones) */
                 @media (max-width: 480px) {
                     /* mobile styles */
-                    .intro{
-                        display: none;
-                    }
+                   
                 }
 
                 /* Small devices (big phones, small tablets) */
-                @media (max-width: 768px) {
+                
                     /* portrait tablets + large mobiles */
-                    .intro{
-                        display: none;
-                    }
-                }
+                    @media(max-width: 768px) {
+                            .about-section {
+                                display: none !important;
+                            }
+                            .about-ms{
+                                display: block;
+                                margin: 0px !important;
+                            }
+
+                            .about-img {
+                               height: 280px !important;
+                            }
+
+                            .links {
+                                margin-top: 10px;
+                            }
+
+                            .name-abt{
+                                display: none;
+                            }
+                        }
+                
 
                 /* Medium devices (tablets landscape) */
                 @media (max-width: 1024px) {
@@ -213,11 +233,12 @@ div.container {
                     #about-sec{
                         padding: 0%;
                         margin-top: 0%;
+                        
                     }
 
                     .about-section{
                        display: block;
-                       background-color: rgb(201, 197, 197);
+                       background-color: transparent;
                     }
 
                     .about{
@@ -232,6 +253,11 @@ div.container {
                         margin-left: 0%;
                     }
 
+                    .abt-msg{
+                        background-color: rgb(236, 235, 235);
+                        padding: 20px;
+                        border-radius: 20px;
+                    }
 
                 }
 
@@ -245,53 +271,27 @@ div.container {
 /* About section css end */
 
 /* Skills section */
-div.skills {}
+
 
 div#skill-section {
     padding-top: 90px !important;
 }
 
-div.frontend {
-    display: grid;
-    grid-template-columns: auto auto auto ;
-    gap: 10px;
-    margin-left: 50px;
-}
+   
+div.card-skill{
+            background-color: rgb(175, 210, 224);
 
-div.tools-frontend {
-    background-color: rgb(233, 230, 230);
-    border-radius: 10px;
-    justify-content: center;
-    align-self: center;
+            .card-title{
+                color: rgb(74, 73, 73);
+                font-size: 1.5em;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+        }
 
-    .card:hover {
-        transform: translateY(-2px);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    }
+        
 
-    .js-img{
-        border-radius: 20px;
-    }
-
-}
-
-div.tools-frontend-fl {
-    background-color: rgb(233, 230, 230);
-    border-radius: 10px;
-    margin-left: 10px;
-    justify-content: center;
-    align-self: center;
-
-    .card:hover {
-        transform: translateY(-2px);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    }
-
-}
-
-
-
-div.tools-backend {
+div.tools-skill {
     background-color: rgb(233, 230, 230);
     border-radius: 10px;
     margin-top: 20px !important;
@@ -300,6 +300,10 @@ div.tools-backend {
     padding-bottom: 50px !important;
     justify-content: center;
     align-self: center;
+
+    .tool-img{
+        object-fit: contain;
+    }
 
     .card:hover {
         transform: translateY(-2px);
@@ -314,35 +318,7 @@ div.tools-backend {
 }
 
 
-     /* Media Queries start */
-                /* Extra small (phones) */
-                @media (max-width: 480px) {
-                    /* mobile styles */
-                    
-                }
-
-                /* Small devices (big phones, small tablets) */
-                @media (max-width: 768px) {
-                    /* portrait tablets + large mobiles */
-                   
-                }
-
-                /* Medium devices (tablets landscape) */
-                @media (max-width: 1024px) {
-                    
-                    div.frontend {
-                       display: block;
-                       gap: 20px;
-                   }
-                   
-                }
-
-                /* Large screens (desktops) */
-                @media (max-width: 1200px) {
-                    /* desktops */
-                }
-
-        /* Media Queries end */
+     
 
 
 
@@ -395,6 +371,12 @@ div.tools-backend {
     .info {
         color: rgb(8, 8, 8);
         text-align: left;
+        margin-left: 100px;
+
+        .mail{
+            text-decoration: none;
+            color: #020024;
+        }
 
         i {
             padding-right: 3px;
@@ -481,11 +463,6 @@ div.tools-backend {
 
 @media (max-width: 576px) {
 
-    h2,
-    h4 {
-        margin-left: 15px;
-    }
-
     p {
         margin-left: 3px;
     }
@@ -499,19 +476,108 @@ div.tools-backend {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    #Contact {
-        margin: 0 250px;
+@media(max-width: 768px) {
+
+    .info{
+        margin-left: 0px !important;
+      
+    }
+    #Contact h2 {
+        padding-bottom: 0%;
+        margin-top: 120px !important;
+        margin-bottom: 0% !important;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #Contact .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #reach {
+        width: 80%;
+    }
+
+    #reach input, 
+    #reach textarea {
+        width: 70%;
     }
 }
 
-@media (min-width: 1200px) {
-    #Contact {
-        margin: 0 300px;
-    }
-}
+
 
 /* Contact Section */
+
+/* Footer start */
+
+.footer {
+    background: #4f4e4e;
+    color: #eee;
+    padding-top: 20px !important;
+    /* margin-top: 50px; */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    h3{
+     text-align: center;
+     font-size: 24px;
+    font-weight: 600;
+    } 
+}
+
+.footer-left p {
+    margin: 5px 0 0 0;
+    color: #aaa;
+}
+
+
+
+.footer-right a {
+    font-size: 22px;
+    margin-left: 12px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: #fff;
+}
+
+/* Footer bottom text */
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px !important;
+}
+
+/* 📱 MOBILE FRIENDLY */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-center {
+        margin: 15px 0;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
+}
+
+
+/* Footer end */
 
 html {
     scroll-behavior: smooth;

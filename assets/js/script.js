@@ -22,6 +22,92 @@ function typeRole() {
 typeRole(); // first run
 setInterval(typeRole, 4000); // every 2.5 seconds
 
+// 
+
+// Download Button
+    
+  // Path/URL to your PDF file
+  const pdfUrl = "assets/Resume/Kumaravel resume.pdf"; 
+  const pdfFileName = "Kumaravel resume.pdf";    
+
+  document.getElementById("downloadBtn").addEventListener("click", function () {
+    const a = document.createElement("a");
+    a.href = pdfUrl;
+    a.download = pdfFileName;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+
+
+// 
+
+
+// Skill Section
+
+const skillRoot = document.getElementById("skill-section");
+
+
+const skillsDiv = document.createElement("div");
+skillsDiv.className = "skills";
+
+const heading = document.createElement("h1");
+heading.className = "text-center name";
+heading.textContent = "Skills";
+
+skillsDiv.appendChild(heading);
+
+
+const toolsWrapper = document.createElement("div");
+toolsWrapper.className = "tools m-1";
+
+
+const row = document.createElement("div");
+row.className = "tools-skill row row-cols-1 row-cols-md-2 g-4";
+
+     // Skills data
+const skillsData = [
+  { title: "HTML 5", img: "/assets/images/skills/html.png", padding: "p-3" },
+  { title: "CSS 3", img: "/assets/images/skills/css.png", padding: "p-4" },
+  { title: "JS", img: "/assets/images/skills/javascript.webp", padding: "p-3 js-img" },
+  { title: "Bootstrap", img: "/assets/images/skills/bootstrap.png", padding: "p-3" },
+  { title: "React", img: "/assets/images/skills/react.png", padding: "" },
+  { title: "SQL", img: "/assets/images/skills/sql.png", padding: "p-3" },
+  { title: "MY SQL", img: "/assets/images/skills/mysql.png", padding: "p-3" }
+];
+
+skillsData.forEach(skill => {
+    const col = document.createElement("div");
+    col.className = "col col-6 col-sm-6 col-md-4 col-lg-3";
+
+    const card = document.createElement("div");
+    card.className = "card card-skill text-center";
+
+    const img = document.createElement("img");
+    img.src = skill.img;
+    img.className = `card-img-top tool-img ${skill.padding}`;
+    img.alt = skill.title;
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    const title = document.createElement("h5");
+    title.className = "card-title";
+    title.textContent = skill.title;
+
+    body.appendChild(title);
+    card.appendChild(img);
+    card.appendChild(body);
+    col.appendChild(card);
+    row.appendChild(col);
+});
+
+toolsWrapper.appendChild(row);
+skillsDiv.appendChild(toolsWrapper);
+skillRoot.appendChild(skillsDiv);
+
+
+// 
 
 
 // Project section
