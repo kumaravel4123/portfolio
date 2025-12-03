@@ -2,42 +2,47 @@
 
 //  Hero section 
 const roles = [
-    "Frontend Developer..."
+  "Frontend Developer..."
 ];
 
 let index = 0;
 const roleText = document.getElementById("role-text");
 
 function typeRole() {
-    roleText.textContent = roles[index];
+  roleText.textContent = roles[index];
 
-    // Restart animation
-    roleText.style.animation = "none";
-    void roleText.offsetWidth;  // trick to restart CSS animation
-    roleText.style.animation = null;
+  // Restart animation
+  roleText.style.animation = "none";
+  void roleText.offsetWidth;  // trick to restart CSS animation
+  roleText.style.animation = null;
 
-    index = (index + 1) % roles.length;
+  index = (index + 1) % roles.length;
 }
 
 typeRole(); // first run
 setInterval(typeRole, 4000); // every 2.5 seconds
 
+// Say hello btn
+document.getElementById("helloBtn").addEventListener("click", function () {
+  alert("Hello! 👋 Thanks for visiting my portfolio.");
+});
+
 // 
 
 // Download Button
-    
-  // Path/URL to your PDF file
-  const pdfUrl = "assets/Resume/Kumaravel resume.pdf"; 
-  const pdfFileName = "Kumaravel resume.pdf";    
 
-  document.getElementById("downloadBtn").addEventListener("click", function () {
-    const a = document.createElement("a");
-    a.href = pdfUrl;
-    a.download = pdfFileName;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  });
+// Path/URL to your PDF file
+const pdfUrl = "assets/Resume/Kumaravel resume.pdf";
+const pdfFileName = "Kumaravel resume.pdf";
+
+document.getElementById("downloadBtn").addEventListener("click", function () {
+  const a = document.createElement("a");
+  a.href = pdfUrl;
+  a.download = pdfFileName;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+});
 
 
 // 
@@ -65,7 +70,7 @@ toolsWrapper.className = "tools m-1";
 const row = document.createElement("div");
 row.className = "tools-skill row row-cols-1 row-cols-md-2 g-4";
 
-     // Skills data
+// Skills data
 const skillsData = [
   { title: "HTML 5", img: "assets/images/skills/html.png", padding: "p-3" },
   { title: "CSS 3", img: "assets/images/skills/css.png", padding: "p-4" },
@@ -77,29 +82,29 @@ const skillsData = [
 ];
 
 skillsData.forEach(skill => {
-    const col = document.createElement("div");
-    col.className = "col col-6 col-sm-6 col-md-4 col-lg-3";
+  const col = document.createElement("div");
+  col.className = "col col-6 col-sm-6 col-md-4 col-lg-3";
 
-    const card = document.createElement("div");
-    card.className = "card card-skill text-center";
+  const card = document.createElement("div");
+  card.className = "card card-skill text-center";
 
-    const img = document.createElement("img");
-    img.src = skill.img;
-    img.className = `card-img-top tool-img ${skill.padding}`;
-    img.alt = skill.title;
+  const img = document.createElement("img");
+  img.src = skill.img;
+  img.className = `card-img-top tool-img ${skill.padding}`;
+  img.alt = skill.title;
 
-    const body = document.createElement("div");
-    body.className = "card-body";
+  const body = document.createElement("div");
+  body.className = "card-body";
 
-    const title = document.createElement("h5");
-    title.className = "card-title";
-    title.textContent = skill.title;
+  const title = document.createElement("h5");
+  title.className = "card-title";
+  title.textContent = skill.title;
 
-    body.appendChild(title);
-    card.appendChild(img);
-    card.appendChild(body);
-    col.appendChild(card);
-    row.appendChild(col);
+  body.appendChild(title);
+  card.appendChild(img);
+  card.appendChild(body);
+  col.appendChild(card);
+  row.appendChild(col);
 });
 
 toolsWrapper.appendChild(row);
@@ -117,7 +122,7 @@ const projects = [
     img: "assets/images/projects/E-commerce img.avif",
     desc:
       "Fully responsive online store using React.js. Includes product listing, search, cart management and checkout features.",
-    live: "https://react-e-commerce-1ewmtmf04-kumaravels-projects-6aad2830.vercel.app",
+    live: "https://react-e-commerce-5sew.vercel.app/",
     github: "https://react-e-commerce-1ewmtmf04-kumaravels-projects-6aad2830.vercel.app"
   },
   {
@@ -146,7 +151,7 @@ const projects = [
     title: "Portfolio",
     img: "assets/images/projects/Portfolio_img.png",
     desc: "A responsive personal portfolio website with the frontend tools like HTML5, CSS3, Bootstrap and Javascript",
-    live: "http://react-instagram-clone-rcjy.vercel.app",
+    live: "https://portfolio-eight-azure-33.vercel.app/",
     github: "http://react-instagram-clone-rcjy.vercel.app"
   }
 ];
@@ -161,7 +166,7 @@ projects.forEach(project => {
     <div class="card">
       <img src="${project.img}" class="card-img-top" alt="${project.title}">
       <div class="card-body">
-        <h3 class="card-title">${project.title}</h3>
+        <h4 class="card-title">${project.title}</h4>
        <p><small class="card-text">${project.desc}</small></p> 
         <a href="${project.live}" class="btn btn-primary">Live Link</a>
         <a href="${project.github}" class="btn btn-primary">GH Link</a>
