@@ -1,4 +1,31 @@
 
+// Navbar
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+
 
 //  Hero section 
 const roles = [
@@ -50,66 +77,66 @@ document.getElementById("downloadBtn").addEventListener("click", function () {
 
 // Skill Section
 
-const skillRoot = document.getElementById("skill-section");
+// const skillRoot = document.getElementById("skill-section");
 
 
-const skillsDiv = document.createElement("div");
-skillsDiv.className = "skills";
+// const skillsDiv = document.createElement("div");
+// skillsDiv.className = "skills";
 
-const heading = document.createElement("h1");
-heading.className = "text-center name";
-heading.textContent = "Skills";
+// const heading = document.createElement("h1");
+// heading.className = "text-center name";
+// heading.textContent = "Skills";
 
-skillsDiv.appendChild(heading);
-
-
-const toolsWrapper = document.createElement("div");
-toolsWrapper.className = "tools m-1";
+// skillsDiv.appendChild(heading);
 
 
-const row = document.createElement("div");
-row.className = "tools-skill row row-cols-1 row-cols-md-2 g-4";
+// const toolsWrapper = document.createElement("div");
+// toolsWrapper.className = "tools m-1";
 
-// Skills data
-const skillsData = [
-  { title: "HTML 5", img: "assets/images/skills/html.png", padding: "p-3" },
-  { title: "CSS 3", img: "assets/images/skills/css.png", padding: "p-4" },
-  { title: "JS", img: "assets/images/skills/javascript.webp", padding: "p-3 js-img" },
-  { title: "Bootstrap", img: "assets/images/skills/bootstrap.png", padding: "p-3" },
-  { title: "React", img: "assets/images/skills/react.png", padding: "" },
-  { title: "SQL", img: "assets/images/skills/sql.png", padding: "p-3" },
-  { title: "MY SQL", img: "assets/images/skills/mysql.png", padding: "p-3" }
-];
 
-skillsData.forEach(skill => {
-  const col = document.createElement("div");
-  col.className = "col col-6 col-sm-6 col-md-4 col-lg-3";
+// const row = document.createElement("div");
+// row.className = "tools-skill row row-cols-1 row-cols-md-2 g-4";
 
-  const card = document.createElement("div");
-  card.className = "card card-skill text-center";
+// // Skills data
+// const skillsData = [
+//   { title: "HTML 5", img: "assets/images/skills/html.png" },
+//   { title: "CSS 3", img: "assets/images/skills/css.png"},
+//   { title: "JS", img: "assets/images/skills/javascript.webp" },
+//   { title: "Bootstrap", img: "assets/images/skills/bootstrap.png"},
+//   { title: "React", img: "assets/images/skills/react.png" },
+//   { title: "SQL", img: "assets/images/skills/sql.png" },
+//   { title: "MY SQL", img: "assets/images/skills/mysql.png" }
+// ];
 
-  const img = document.createElement("img");
-  img.src = skill.img;
-  img.className = `card-img-top tool-img ${skill.padding}`;
-  img.alt = skill.title;
+// skillsData.forEach(skill => {
+//   const col = document.createElement("div");
+//   col.className = "col col-6 col-sm-6 col-md-4 col-lg-3";
 
-  const body = document.createElement("div");
-  body.className = "card-body";
+//   const card = document.createElement("div");
+//   card.className = "card card-skill text-center";
 
-  const title = document.createElement("h5");
-  title.className = "card-title";
-  title.textContent = skill.title;
+//   const img = document.createElement("img");
+//   img.src = skill.img;
+//   img.className = `card-img-top tool-img ${skill.padding}`;
+//   img.alt = skill.title;
 
-  body.appendChild(title);
-  card.appendChild(img);
-  card.appendChild(body);
-  col.appendChild(card);
-  row.appendChild(col);
-});
+//   const body = document.createElement("div");
+//   body.className = "card-body";
 
-toolsWrapper.appendChild(row);
-skillsDiv.appendChild(toolsWrapper);
-skillRoot.appendChild(skillsDiv);
+//   const title = document.createElement("h5");
+//   title.className = "card-title";
+//   title.textContent = skill.title;
+
+//   body.appendChild(title);
+//   card.appendChild(img);
+//   card.appendChild(body);
+//   col.appendChild(card);
+//   row.appendChild(col);
+// });
+
+// toolsWrapper.appendChild(row);
+// skillsDiv.appendChild(toolsWrapper);
+// skillRoot.appendChild(skillsDiv);
 
 
 // 
@@ -181,7 +208,7 @@ projects.forEach(project => {
 // 
 
 // Send Message Button
-const form = document.getElementById('reach');
+const form = document.getElementById('mail');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault(); // stop page reload
