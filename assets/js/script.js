@@ -77,69 +77,35 @@ document.getElementById("downloadBtn").addEventListener("click", function () {
 
 // Skill Section
 
-// const skillRoot = document.getElementById("skill-section");
+const card_details = [
+  { img: 'html-5.png', title: 'HTML' },
+  { img: 'css-3.png', title: 'CSS' },
+  { img: 'bs.png', title: 'Bootstrap' },
+  { img: 'js.jpg', title: 'JavaScript' },
+  { img: 'react.png', title: 'React' },
+  { img: 'sql.png', title: 'SQL' },
+];
 
+function renderCard(card) {
+  return `
+  <div class ="card skill-card">
+  <img src ="assets/images/skills/${card.img}" alt="${card.title}">
+  <h5>${card.title}</h5>
+  </div>
+  `;
+}
+function renderProducts(cards) {
+  const cards_container = document.getElementById('cards');
+  let result = '';
+  for (let card of cards) {
+    result += renderCard(card);
+  }
+  cards_container.innerHTML = result;
+}
 
-// const skillsDiv = document.createElement("div");
-// skillsDiv.className = "skills";
-
-// const heading = document.createElement("h1");
-// heading.className = "text-center name";
-// heading.textContent = "Skills";
-
-// skillsDiv.appendChild(heading);
-
-
-// const toolsWrapper = document.createElement("div");
-// toolsWrapper.className = "tools m-1";
-
-
-// const row = document.createElement("div");
-// row.className = "tools-skill row row-cols-1 row-cols-md-2 g-4";
-
-// // Skills data
-// const skillsData = [
-//   { title: "HTML 5", img: "assets/images/skills/html.png" },
-//   { title: "CSS 3", img: "assets/images/skills/css.png"},
-//   { title: "JS", img: "assets/images/skills/javascript.webp" },
-//   { title: "Bootstrap", img: "assets/images/skills/bootstrap.png"},
-//   { title: "React", img: "assets/images/skills/react.png" },
-//   { title: "SQL", img: "assets/images/skills/sql.png" },
-//   { title: "MY SQL", img: "assets/images/skills/mysql.png" }
-// ];
-
-// skillsData.forEach(skill => {
-//   const col = document.createElement("div");
-//   col.className = "col col-6 col-sm-6 col-md-4 col-lg-3";
-
-//   const card = document.createElement("div");
-//   card.className = "card card-skill text-center";
-
-//   const img = document.createElement("img");
-//   img.src = skill.img;
-//   img.className = `card-img-top tool-img ${skill.padding}`;
-//   img.alt = skill.title;
-
-//   const body = document.createElement("div");
-//   body.className = "card-body";
-
-//   const title = document.createElement("h5");
-//   title.className = "card-title";
-//   title.textContent = skill.title;
-
-//   body.appendChild(title);
-//   card.appendChild(img);
-//   card.appendChild(body);
-//   col.appendChild(card);
-//   row.appendChild(col);
-// });
-
-// toolsWrapper.appendChild(row);
-// skillsDiv.appendChild(toolsWrapper);
-// skillRoot.appendChild(skillsDiv);
-
-
-// 
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts(card_details);
+});
 
 
 // Project section
