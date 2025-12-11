@@ -7,7 +7,7 @@
 
 body {
     /* height: 110vh; */
-    background: linear-gradient(to bottom right, #a2d1ee, rgb(213, 211, 211), #ffffff);
+    background: linear-gradient(to bottom right, #a2d1ee, #cde7f7, #ffffff);
 }
 
 /* Navbar css */
