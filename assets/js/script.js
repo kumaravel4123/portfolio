@@ -4,14 +4,23 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
+window.addEventListener("DOMContentLoaded", () => {
+  navLinks.forEach(link => link.classList.remove("active"));
+
+  const homeLink = document.querySelector('.nav-link[href="#home"]');
+  if (homeLink) {
+    homeLink.classList.add("active");
+  }
+});
+
 window.addEventListener("scroll", () => {
-  let current = "";
+  let current = "home"; 
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
       current = section.getAttribute("id");
     }
   });
@@ -24,12 +33,19 @@ window.addEventListener("scroll", () => {
   });
 });
 
-
+// ✅ Highlight on click
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
 
 
 //  Hero section 
 const roles = [
-  "Frontend Developer..."
+  "Frontend Developer...",
+  "SQL Developer..."
 ];
 
 let index = 0;
@@ -47,7 +63,7 @@ function typeRole() {
 }
 
 typeRole(); // first run
-setInterval(typeRole, 4000); // every 2.5 seconds
+setInterval(typeRole, 3500); // every 2.5 seconds
 
 // Say hello btn
 document.getElementById("helloBtn").addEventListener("click", function () {

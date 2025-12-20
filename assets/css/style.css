@@ -45,16 +45,16 @@ nav.navbar {
     border-radius: 5px;
 }
 
-/* .nav-link.active {
+.nav-link.active {
     background-color: skyblue;   
     border-radius: 5px;
-} */
+}
 
 /* Navbar css end */
 
 /* Hero section css */
 
-div.container {
+section.Hero-sec {
     margin-top: 120px;
 
     .sections {
@@ -73,7 +73,7 @@ div.container {
                 font-family: sans-serif;
                 border-radius: 10px;
                 transition: transform 0.5s ease;
-                background-color: rgb(166, 217, 237);
+                background-color: rgb(77, 197, 244);
                 margin: 10px;
                 margin-left: 0px;
                 height: 80px;
@@ -160,11 +160,6 @@ div.container {
                     }
                 }
 
-                /* Large screens (desktops) */
-                @media (max-width: 1200px) {
-                    /* desktops */
-                }
-
         /* Media Queries end */
 
 /* Hero section css end */
@@ -190,6 +185,7 @@ div.container {
 .about-img {
     border-radius: 50px;
     object-fit: cover;
+    margin-left: 60px;
 }
 
 .links {
@@ -246,7 +242,7 @@ div.container {
                 /* Medium devices (tablets landscape) */
                 @media (max-width: 1024px) {
 
-                    #about-sec{
+                    #About-sec{
                         padding: 0%;
                         margin-top: 0%;
                         
