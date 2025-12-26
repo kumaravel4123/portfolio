@@ -67,7 +67,7 @@ setInterval(typeRole, 3500); // every 2.5 seconds
 
 // Say hello btn
 document.getElementById("helloBtn").addEventListener("click", function () {
-  alert("Hello! 👋 Thanks for visiting my portfolio.");
+  alert("Hi! 👋 Thanks for visiting my portfolio.");
 });
 
 // 
@@ -75,8 +75,8 @@ document.getElementById("helloBtn").addEventListener("click", function () {
 // Download Button
 
 // Path/URL to your PDF file
-const pdfUrl = "assets/Resume/Kumaravel resume.pdf";
-const pdfFileName = "Kumaravel resume.pdf";
+const pdfUrl = "assets/Resume/Kumaravel_Resume.pdf";
+const pdfFileName = "Kumaravel_Resume.pdf";
 
 document.getElementById("downloadBtn").addEventListener("click", function () {
   const a = document.createElement("a");
@@ -100,6 +100,7 @@ const card_details = [
   { img: 'js.jpg', title: 'JavaScript' },
   { img: 'react.png', title: 'React' },
   { img: 'sql.png', title: 'SQL' },
+  { img: 'python.png', title: 'Python' },
 ];
 
 function renderCard(card) {
